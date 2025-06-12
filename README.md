@@ -24,7 +24,6 @@ We used industry-standard tools and techniques in the following phases:
    ![Port Scan](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_1.png)  
    ![Host Discovery](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_2.png)  
    ![Subnet Enumeration](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_3.png)  
-   ![Scan Summary](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)
 
 2. **Vulnerability Scanning & Exploitation**: Identified web application flaws and leveraged remote code execution.  
    ![RCE Identified](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)  
