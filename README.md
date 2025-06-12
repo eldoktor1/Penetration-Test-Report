@@ -42,13 +42,11 @@ We used industry-standard tools and techniques in the following phases:
    ![Root Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_5.png)
 
 5. **Password Cracking**: Cracked exposed password hashes.  
-   ![Cracked Hashes](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_1.png)  
-   ![Hash Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_1.png)  
+   ![Hash Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_3.png)  
+   ![Credentials](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_1.png)  
    ![Weak Credentials](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_2.png)
 
 6. **Sensitive Data Discovery**: Located confidential files and misconfigurations.  
-   ![File Recon](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_3.png)  
-   ![Config File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_1.png)  
    ![Secrets Exposed](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_2.png)
 
 ---
