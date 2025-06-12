@@ -1,14 +1,12 @@
 **Penetration Test Report**  
-**Client:** Allsafe Cybersecurity  
 **Date:** 07/16/2023  
 **Prepared by:** Mina Abskhron, Penetration Tester  
 
 ---
 
 ### Executive Summary
-This report presents the results of a comprehensive penetration test performed against the network infrastructure of Allsafe Cybersecurity. The objective was to evaluate the organization's security posture by identifying vulnerabilities, simulating exploitation, and assessing potential impact.
+This report presents the results of a comprehensive penetration test performed against the network infrastructure of The fictious client. The objective was to evaluate the organization's security posture by identifying vulnerabilities, simulating exploitation, and assessing potential impact.
 
-![Report Header](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_1_img_1.png)
 
 ---
 
