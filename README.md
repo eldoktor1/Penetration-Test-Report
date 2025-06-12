@@ -27,7 +27,7 @@ We used industry-standard tools and techniques in the following phases:
    ![Scan Summary](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)
 
 2. **Vulnerability Scanning & Exploitation**: Identified web application flaws and leveraged remote code execution.  
-   ![RCE Identified](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_1.png)  
+   ![RCE Identified](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)  
    ![Web Vuln Scan](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_2.png)  
    ![Web Shell](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_4.png)  
    ![Exploit Shell Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_5.png)
@@ -51,9 +51,6 @@ We used industry-standard tools and techniques in the following phases:
    ![File Recon](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_3.png)  
    ![Config File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_1.png)  
    ![Secrets Exposed](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_2.png)
-
-7. **Network Segmentation Review**: Found flat architecture enabling movement.  
-   ![Flat Network Map](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_4.png)
 
 ---
 
