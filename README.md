@@ -8,6 +8,8 @@
 ### Executive Summary
 This report presents the results of a comprehensive penetration test performed against the network infrastructure of Allsafe Cybersecurity. The objective was to evaluate the organization's security posture by identifying vulnerabilities, simulating exploitation, and assessing potential impact.
 
+![Report Header](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_1_img_1.png)
+
 ---
 
 ### Objectives
@@ -20,43 +22,40 @@ This report presents the results of a comprehensive penetration test performed a
 
 ### Methodology
 We used industry-standard tools and techniques in the following phases:
-1. **Reconnaissance & Enumeration**: Mapped the /20 subnet and identified active hosts.
-2. **Vulnerability Scanning**: Full port scan (1-65535) on identified systems.
-3. **Exploitation**: Gained initial access through identified weak points.
-4. **Post-Exploitation**: Privilege escalation, data access, and lateral movement.
-5. **Reporting**: Documented findings with supporting screenshots.
+1. **Reconnaissance & Enumeration**: Mapped the /20 subnet and identified active hosts.  
+   ![Port Scan](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_1.png)  
+   ![Host Discovery](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_2.png)  
+   ![Subnet Enumeration](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_3.png)  
+   ![Scan Summary](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)
 
-Tools used included: Nmap, Nikto, John the Ripper, and manual testing scripts.
+2. **Vulnerability Scanning & Exploitation**: Identified web application flaws and leveraged remote code execution.  
+   ![RCE Identified](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_1.png)  
+   ![Web Vuln Scan](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_2.png)  
+   ![Web Shell](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_4.png)  
+   ![Exploit Shell Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_5.png)
 
----
+3. **Lateral Movement**: Expanded access via poorly segmented systems.  
+   ![Pivoting](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_1.png)  
+   ![SMB Exploitation](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_2.png)  
+   ![Host Mapping](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_2.png)
 
-### Findings
+4. **Privilege Escalation**: Elevated access using local exploits.  
+   ![Escalation Technique](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_3.png)  
+   ![Privilege Confirmed](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_4.png)  
+   ![Root Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_5.png)
 
-#### 1. Open Ports & Remote Exploits
-- **Port 1013**: Hosted a vulnerable web application (see below) which allowed remote code injection. This was used as the initial point of compromise.  
-  ![Initial Web Exploit](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_1.png)
+5. **Password Cracking**: Cracked exposed password hashes.  
+   ![Cracked Hashes](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_1.png)  
+   ![Hash Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_1.png)  
+   ![Weak Credentials](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_2.png)
 
-- **Port 2222**: Lateral movement was achieved from the compromised host. Lack of segmentation allowed pivoting.  
-  ![Port 2222 Compromise](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_2.png)
+6. **Sensitive Data Discovery**: Located confidential files and misconfigurations.  
+   ![File Recon](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_3.png)  
+   ![Config File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_1.png)  
+   ![Secrets Exposed](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_2.png)
 
-- **Port 445 (SMB)**: Gained access to multiple Windows systems via known SMB vulnerabilities.  
-  ![SMB Exploitation](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_1.png)
-
-#### 2. Privilege Escalation
-Using local exploits and weak configurations, administrative access was obtained on several machines. Escalation was supported by weak permissions and outdated software.  
-  ![Privilege Escalation](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_2.png)
-
-#### 3. Password Weaknesses
-Password hashes were extracted and cracked using John the Ripper. Weak credentials were found such as `admin:123456`, indicating a lack of enforcement of strong password policies.  
-  ![Password Cracking](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_1.png)
-
-#### 4. Reconnaissance & Sensitive Data Discovery
-System-level enumeration revealed various sensitive files and configurations. No password files were recovered, but user info and system blueprints were accessible.  
-  ![Recon Evidence](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_3.png)
-
-#### 5. Poor Network Segmentation
-The flat network structure allowed unrestricted lateral movement between systems.  
-  ![Network Segmentation](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_4.png)
+7. **Network Segmentation Review**: Found flat architecture enabling movement.  
+   ![Flat Network Map](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_4.png)
 
 ---
 
