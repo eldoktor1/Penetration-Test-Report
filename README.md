@@ -1,73 +1,133 @@
-**Penetration Test Report**  
+# Penetration Test Report
+
+**Client:** Allsafe Cybersecurity  
+**Prepared by:** Mina Abskhron, Security Analyst  
 **Date:** 07/16/2023  
-**Prepared by:** Mina Abskhron, Penetration Tester  
 
 ---
 
-### Executive Summary
-This report presents the results of a comprehensive penetration test performed against the network infrastructure of The fictious client. The objective was to evaluate the organization's security posture by identifying vulnerabilities, simulating exploitation, and assessing potential impact.
+## 📌 Executive Summary
 
-
----
-
-### Objectives
-- Identify vulnerabilities in the network and web applications.
-- Test lateral movement and privilege escalation possibilities.
-- Evaluate password strength and authentication mechanisms.
-- Assess segmentation and access control across the network.
+This report summarizes a targeted penetration test conducted on Allsafe Cybersecurity’s internal network. The objective was to simulate real-world attack scenarios, assess vulnerabilities, and evaluate the organization’s ability to detect, prevent, and respond to threats.
 
 ---
 
-### Methodology
-We used industry-standard tools and techniques in the following phases:
-1. **Reconnaissance & Enumeration**: Mapped the /20 subnet and identified active hosts.  
-   ![Port Scan](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_1.png)  
-   ![Host Discovery](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_2.png)  
-   ![Subnet Enumeration](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_3.png)  
+## 🎯 Objectives
 
-2. **Vulnerability Scanning & Exploitation**: Identified web application flaws and leveraged remote code execution.  
-   ![RCE Identified](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)  
-   ![Web Vuln Scan](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_2.png)  
-   ![Web Shell](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_4.png)  
-   ![Exploit Shell Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_5.png)
-
-3. **Lateral Movement**: Expanded access via poorly segmented systems.  
-   ![Pivoting](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_1.png)  
-   ![SMB Exploitation](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_2.png)  
-   ![Host Mapping](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_2.png)
-
-4. **Privilege Escalation**: Elevated access using local exploits.  
-   ![Escalation Technique](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_3.png)  
-   ![Privilege Confirmed](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_4.png)  
-   ![Root Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_5.png)
-
-5. **Password Cracking**: Cracked exposed password hashes.  
-   ![Hash Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_3.png)  
-   ![Credentials](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_1.png)  
-   ![Weak Credentials](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_2.png)
-
-6. **Sensitive Data Discovery**: Located confidential files and misconfigurations.  
-   ![Secrets Exposed](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_2.png)
+- Discover internal and external vulnerabilities  
+- Exploit weaknesses to gain unauthorized access  
+- Test for lateral movement and privilege escalation  
+- Provide actionable remediation steps  
 
 ---
 
-### Recommendations
-1. **Patch Management**: Apply critical security patches to all systems and applications.
-2. **Network Segmentation**: Implement VLANs and firewall rules to limit cross-segment access.
-3. **Harden Web Applications**: Conduct regular code reviews and audits. Deploy a WAF.
-4. **Enforce MFA & Password Policy**: Require complex passwords and implement multi-factor authentication.
-5. **Privilege Hardening**: Regularly audit user roles and remove unnecessary admin privileges.
-6. **Monitoring & Logging**: Enable system logging and configure alerts for suspicious activity.
+## 🛠️ Methodology
+
+### Tools Used
+- Nmap for scanning  
+- Metasploit for exploitation  
+- John the Ripper for password cracking  
+- Manual Bash scripting
+
+### Phases
+1. Reconnaissance  
+2. Vulnerability Scanning  
+3. Exploitation  
+4. Privilege Escalation  
+5. Lateral Movement  
+6. Post-Exploitation Analysis  
 
 ---
 
-### Conclusion
-Multiple critical vulnerabilities were identified and exploited, demonstrating the ability to compromise systems, escalate privileges, and access sensitive information. By acting on the above recommendations, Allsafe Cybersecurity can significantly improve its defenses.
+## 🔍 Reconnaissance & Scanning
+
+Performed host discovery and port scanning on target subnet.
+
+![Nmap Results](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_1.png)  
+![More Nmap Data](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_2.png)  
+![Subnet Mapping](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_3_img_3.png)
+
+> Result: Identified multiple hosts and open ports across various services including HTTP, SMB, and SSH.
 
 ---
 
-**Contact:**  
-Mina Abskhron  
-Penetration Tester  
-Allsafe Cybersecurity  
-Email: mina.abskhron@example.com
+## 🧨 Exploitation
+
+Used discovered vulnerabilities for remote code execution via Metasploit.
+
+![Exploit Setup](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_1.png)  
+![Payload Injection](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_2.png)  
+![Command Injection](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_3.png)  
+![Shell Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_4.png)  
+![Directory Access](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_4_img_5.png)
+
+> Result: Gained initial shell access as an unprivileged user.
+
+---
+
+## 🔼 Privilege Escalation
+
+Discovered readable SSH keys and used known exploits to elevate access.
+
+![SSH Key Found](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_1.png)  
+![Private Key Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_5_img_2.png)
+
+> Result: Privilege escalated to full system administrator.
+
+---
+
+## 🔐 Password Cracking
+
+Dumped password hashes and cracked weak credentials.
+
+![Hash Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_1.png)  
+![Password File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_2.png)  
+![Session Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_3.png)  
+![Kernel Info](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_4.png)  
+![User/Group Permissions](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_5.png)
+
+> Result: Cracked multiple weak passwords including `admin:123456`.
+
+---
+
+## 🔄 Lateral Movement
+
+Used cracked credentials to pivot to additional systems via SMB and WinRM.
+
+![Metasploit Pivoting](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_1.png)  
+![Administrator Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_2.png)  
+![Credential Modules](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_3.png)  
+![Lateral Exploit](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_7_img_4.png)
+
+> Result: Expanded access to multiple Windows machines inside the environment.
+
+---
+
+## 🧾 Data Exposure
+
+Located unencrypted files containing passwords and internal information.
+
+![Secrets File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_1.png)  
+![Credential File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_8_img_2.png)
+
+---
+
+## 🛡️ Recommendations
+
+1. Patch outdated and vulnerable services  
+2. Enforce strong password policies  
+3. Limit user privileges using RBAC  
+4. Disable unnecessary ports and services  
+5. Apply network segmentation  
+6. Monitor logs and configure alerts  
+
+---
+
+## ✅ Conclusion
+
+The test uncovered multiple critical vulnerabilities allowing full system compromise, lateral movement, and sensitive data exposure. Mitigation steps are required immediately to improve Allsafe Cybersecurity’s posture.
+
+---
+
+**Prepared by:** Mina Abskhron  
+**GitHub:** [@eldoktor1](https://github.com/eldoktor1)
