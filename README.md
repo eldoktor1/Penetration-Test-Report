@@ -77,7 +77,7 @@ Discovered readable SSH keys and used known exploits to elevate access.
 
 ## 🔐 Password Cracking
 
-Dumped password hashes and cracked weak credentials.
+Found a way for a persistence and an opportunity to laterally move in the network.
 
 ![Hash Dump](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_1.png)  
 ![Password File](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_2.png)  
@@ -85,7 +85,7 @@ Dumped password hashes and cracked weak credentials.
 ![Kernel Info](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_4.png)  
 ![User/Group Permissions](https://raw.githubusercontent.com/eldoktor1/Penetration-Test-Report/main/images/page_6_img_5.png)
 
-> Result: Cracked multiple weak passwords including `admin:123456`.
+
 
 ---
 
