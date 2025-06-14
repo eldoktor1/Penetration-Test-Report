@@ -1,6 +1,5 @@
 # Penetration Test Report
 
-**Client:** Allsafe Cybersecurity  
 **Prepared by:** Mina Abskhron, Security Analyst  
 **Date:** 07/16/2023  
 
@@ -8,7 +7,7 @@
 
 ## 📌 Executive Summary
 
-This report summarizes a targeted penetration test conducted on Allsafe Cybersecurity’s internal network. The objective was to simulate real-world attack scenarios, assess vulnerabilities, and evaluate the organization’s ability to detect, prevent, and respond to threats.
+This report summarizes a targeted penetration test conducted on a fictious company’s internal network. The objective was to simulate real-world attack scenarios, assess vulnerabilities, and evaluate the organization’s ability to detect, prevent, and respond to threats.
 
 ---
 
